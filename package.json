@@ -1,0 +1,23 @@
+{
+  "name": "meow-meow-jumping-adventures",
+  "version": "1.0.0",
+  "description": "this is a game about three jumping kittens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Immanuel-Victor/meow-meow-jumping-adventures.git"
+  },
+  "author": "Immanuel-Victor, Caio-Pinheiro, Artur-Almeida, Debora-Camilly, Alvaro-Renan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Immanuel-Victor/meow-meow-jumping-adventures/issues"
+  },
+  "homepage": "https://github.com/Immanuel-Victor/meow-meow-jumping-adventures#readme",
+  "dependencies": {
+    "express": "4.17.3",
+    "nes.css": "2.3.0"
+  }
+}
