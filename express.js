@@ -60,7 +60,7 @@ app.post('/addPlayer', (req, res) => {
     
     console.log(ranking.playerList);
 
-    res.sendFile(`${basePath}/resultado.html`);
+    res.sendFile(`${basePath}/result.html`);
 });
 
 // Respondendo requisição de ranking com as informações contidas no JSON
