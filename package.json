@@ -19,7 +19,6 @@
   "homepage": "https://github.com/Immanuel-Victor/meow-meow-jumping-adventures#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "4.17.3",
-    "nes.css": "2.3.0"
+    "express": "4.17.3"
   }
 }
