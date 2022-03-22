@@ -10,10 +10,10 @@ export class Player{
         this.CAT_SPRITE_WIDTH = 160;
         this.CAT_SPRITE_HEIGHT = 120;
         this.x = this.gameWidth/2 - this.gameWidth/2;
-        this.y = 385;
+        this.y = 350;
         this.jumpingHeight = 500;
         this.velocidadeY = 0;
-        this.forca_gravid = 0.2;
+        this.forca_gravid = 0.7;
         this.frameX = 0;
         this.frameY = 0;
         this.maxFrames = 3;

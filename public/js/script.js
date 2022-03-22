@@ -4,8 +4,8 @@ import {InputHandler} from './input.js'
 window.addEventListener('load', function(){
     const canva_jogo = document.getElementById('canva_jogo');
     const contexto_jogo = canva_jogo.getContext('2d');
-    canva_jogo.width = window.innerWidth;
-    canva_jogo.height = window.innerHeight;
+    canva_jogo.width = 160;
+    canva_jogo.height = screen.height * 0.638;
 
 
     const player = new Player(canva_jogo.width, canva_jogo.height);
