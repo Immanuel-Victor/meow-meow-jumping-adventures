@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+body{
+    background-image: url(/assets/images/cidade1.png);
+    background-position: 10% -475px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visible_modal {
+    display: flex;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.buttons_div {
+    font-size: .8em;
+}
+
+#score {
+    font-size: 3em;
+    text-align: center;
+}
+
+#score_input {
+    display: none;
+}
+
+#canva_jogo{
+    top: 0;
+    left: 0;
+}
+
+#imagem_gato{
+    display: none;
+}
