@@ -61,7 +61,7 @@ async function adicionaBuraco(largura, ancestral) {
     buraco.setAttribute("class", "buraco");
     ancestral.appendChild(buraco);
 
-    let tempoColisao = (velocidade * 100) + (screen.width * ((largura + 40) / 100));
+    let tempoColisao = (velocidade * 100) + (screen.width * ((largura + 30) / 100));
     setTimeout(() => colisao(gato, buraco, function caiuNoBuraco(posicaoGato, posicaoObstaculo) {
         if (posicaoObstaculo.left - posicaoGato.left <= comprimentoDoGato * 0.7 && posicaoGato.right - posicaoObstaculo.right <= comprimentoDoGato * 0.5){
             fimDeJogo();
@@ -95,7 +95,7 @@ async function oBuraco(){
     // elemento que contém os componentes do chao: tileset e buraco
     let base = document.createElement("div");
     base.setAttribute("class", "tileset");
-    base.style.minWidth = `${largura + 40}vw`;
+    base.style.minWidth = `${largura + 30}vw`;
 
     // div com tileset como imagem de fundo
     let imagem = document.createElement("div");
@@ -110,7 +110,7 @@ async function oBuraco(){
     chao.appendChild(ancestral);
     
     // adiciona o comportamento de scroll ao jogo (aplicado na div ancestral)
-    mudancaDoChao(ancestral, 100, largura + 40, vwPorVelocidade, velocidade);
+    mudancaDoChao(ancestral, 100, largura + 30, vwPorVelocidade, velocidade);
 }
 oBuraco();
 
