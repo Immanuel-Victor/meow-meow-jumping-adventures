@@ -6,11 +6,11 @@ window.addEventListener('load', function(){
     const contexto_jogo = canva_jogo.getContext('2d');
     canva_jogo.width = 160;
     canva_jogo.height = screen.height * 0.638;
-
-
+    
+    
     const player = new Player(canva_jogo.width, canva_jogo.height);
     const input = new InputHandler();
-
+    
     let lastTime = 0;
     function animate(timeStamp){
         const deltaTime = timeStamp - lastTime;

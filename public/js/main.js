@@ -2,9 +2,13 @@
 
 let qS = identificador => document.querySelector(identificador);
 
-let corpo = qS("body");
-let gato = qS("#canva_jogo");
-let chao = qS("#chao");
+const modal = qS(".modal");
+const scoreInput = qS("#score_input");
+const scoreIndicator = qS("#score");
+const scoreMeter = qS("#scoreMeter");
+const corpo = qS("body");
+const gato = qS("#canva_jogo");
+const chao = qS("#chao");
 
 // OBSTÁCULOS
 
@@ -13,6 +17,8 @@ let velocidade = 20, comprimentoDoGato = gato.clientWidth;
 async function fimDeJogo(...nada) {
     mudancaDoChao = new Function();
     aQuedaDoGato = new Function();
+    clearInterval(scoreInterval);
+    toggleModal();
 }
 
 async function colisao(gato, obstaculo, funcao) {
@@ -149,3 +155,20 @@ corpo.addEventListener("keydown", (tecla) => {
 
     }
 });
+
+// PONTUAÇÃO
+
+let score = 0;
+
+const scoreInterval = setInterval(() => {
+        score+=10;
+        scoreMeter.textContent = score;
+}, 1000);
+
+function toggleModal() {
+
+    scoreInput.value = score;
+    scoreIndicator.textContent = score;
+
+    modal.classList.toggle("visible_modal");
+}

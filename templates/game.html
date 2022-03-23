@@ -10,12 +10,11 @@
     <title>Meow Meow Jumping Adventures</title>
 </head>
 <body>
-    <a href="/game">Ir para o jogo</a>
     <div class="modal nes-container">
         <form action="/addPlayer" method="POST">
             <div class="nes-field">
                 <label for="name_field">Insira seu nome</label>
-                <input name="name" type="text" id="name_field" class="nes-input">
+                <input name="name" type="text" id="name_field" class="nes-input" required>
             </div>
             <input name="score" type="text" id="score_input">
             <div class="score_div">
@@ -28,14 +27,13 @@
             </div>
         </form>
     </div>
-
+    <p id="scoreMeter">0</p>
     <canvas id="canva_jogo"></canvas>
     <canvas id="canva_gato"></canvas>
     <section id="chao"></section>
     <img id="imagem_gato" src="assets/images/gatin_manchado_all_sprites.png"/>
     
     <script type="module" src="js/script.js"></script>
-    <script type="module" src="js/modal.js"></script>
-    <script src="../js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
