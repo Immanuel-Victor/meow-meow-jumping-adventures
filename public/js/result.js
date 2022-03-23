@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/ranking")
+fetch("http://localhost:3000/playerList")
         .then((resposta) => {
           return resposta.json();
         })

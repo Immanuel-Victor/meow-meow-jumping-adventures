@@ -40,8 +40,8 @@ app.get('/game', (req, res) => {
     res.sendFile(`${basePath}/game.html`);
 });
 
-app.get('/result', (req, res) => {
-    res.sendFile(`${basePath}/result.html`);
+app.get('/ranking', (req, res) => {
+    res.sendFile(`${basePath}/ranking.html`);
 });
 
 // Obtendo nome e pontos do jogador a partir dos forms, e escrevendo no ranking.json
@@ -60,12 +60,12 @@ app.post('/addPlayer', (req, res) => {
     
     console.log(ranking.playerList);
 
-    res.sendFile(`${basePath}/result.html`);
+    res.redirect('/ranking');
 });
 
 // Respondendo requisição de ranking com as informações contidas no JSON
 
-app.get('/ranking', (req, res) => {
+app.get('/playerList', (req, res) => {
     res.send(ranking);
     console.log(ranking);
 });
