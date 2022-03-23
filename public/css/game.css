@@ -48,3 +48,7 @@ body{
 #score_input {
     display: none;
 }
+
+#scoreMeter {
+    font-size: 2em;
+}

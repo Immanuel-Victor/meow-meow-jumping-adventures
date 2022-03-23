@@ -4,7 +4,13 @@
 }
 
 body {
-    background-color: blue;
+    background-image: url("../assets/images/cidade1.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -64,6 +70,6 @@ body {
 
 .buraco {
     height: 96px;
-    width: 40vw;
+    width: 30vw;
     transform: translateY(-1px);
 }
