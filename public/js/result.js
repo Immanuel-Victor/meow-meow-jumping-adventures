@@ -3,14 +3,16 @@ fetch("http://localhost:3000/playerList")
           return resposta.json();
         })
         .then((json) => {
-          console.log(json);
-          const ranking = json.playerList;
-
+          let ranking = json.playerList;
+          
+          ranking.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+          
+          console.log(ranking);
           const lista = document.querySelector("ul");
 
-          ranking.forEach(player => {
+          for(let i = 0; i < 10; i++) {
             let li = document.createElement("li");
-            li.textContent = `${player.name}: ${player.score}`;
+            li.textContent = `${i+1} - ${ranking[i].name}: ${ranking[i].score}`;
             lista.appendChild(li);
-          });
+          }
         });
