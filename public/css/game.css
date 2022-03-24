@@ -40,6 +40,13 @@ body{
     font-size: .8em;
 }
 
+#game_frame {
+    position: absolute;
+    bottom: 25vh;
+    left: 5vh;
+    transform: scale(1.5);
+}
+
 #score {
     font-size: 3em;
     text-align: center;
