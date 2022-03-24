@@ -10,6 +10,14 @@ const corpo = qS("body");
 const gato = qS("#canva_jogo");
 const chao = qS("#chao");
 
+const mainMusic = new Audio("assets/songs/MMJA Main.mp3");
+      mainMusic.loop = true;
+      mainMusic.volume = 0.3;
+
+const deathMusic = new Audio("assets/songs/MMJA Death.mp3");
+      deathMusic.volume = 0.4;
+
+
 // OBSTÁCULOS
 
 let velocidade = 20, comprimentoDoGato = gato.clientWidth;
@@ -18,6 +26,8 @@ async function fimDeJogo(...nada) {
     mudancaDoChao = new Function();
     aQuedaDoGato = new Function();
     clearInterval(scoreInterval);
+    mainMusic.pause();
+    deathMusic.play();
     toggleModal();
 }
 
@@ -172,3 +182,5 @@ function toggleModal() {
 
     modal.classList.toggle("visible_modal");
 }
+
+window.addEventListener("load", () => mainMusic.play());
