@@ -22,12 +22,12 @@ Seu terminal deve imprimir a mensagem "Executando na porta 3000". Nesse caso, no
 
 ### Equipe responsável
 
-- Immanuel Victor
+- [Immanuel Victor](https://github.com/Immanuel-Victor)
 
-- Artur Almeida
+- [Artur Almeida](https://www.youtube.com/watch?v=SFyBfGC6Alo)
 
-- Caio Pinheiro
+- [Caio Pinheiro](https://github.com/CaioPin)
 
-- Débora Camilly
+- [Débora Camilly](https://github.com/deboraa07)
 
-- Álvaro Renal
+- [Álvaro Renan](https://github.com/Alv4r0Dev13)
