@@ -20,7 +20,7 @@ const deathMusic = new Audio("assets/songs/MMJA Death.mp3");
 
 // OBSTÁCULOS
 
-let velocidade = 20, comprimentoDoGato = gato.clientWidth;
+let velocidade = 20, direitaDoGato = gato.getBoundingClientRect().right;
 
 async function fimDeJogo(...nada) {
     mudancaDoChao = new Function();
@@ -33,6 +33,7 @@ async function fimDeJogo(...nada) {
 
 async function colisao(gato, obstaculo, funcao) {
     let posicaoDoElemento = elemento => elemento.getBoundingClientRect();
+    console.log(Math.random());
 
     let posicaoGato = posicaoDoElemento(gato), posicaoObstaculo = posicaoDoElemento(obstaculo);
 
@@ -60,8 +61,8 @@ async function adicionaAntena(quantidade, largura, ancestral){
         antena.style.left = `${espacamento}vw`
         i++;
 
-        let tempoBase = (velocidade * 100) + (screen.width * (espacamento / 100));
-        setTimeout(() => colisao(gato, antena, fimDeJogo), tempoBase + (comprimentoDoGato * i));
+        let tempoBase = (velocidade * 100) + (velocidade * (espacamento / 100));
+        setTimeout(() => colisao(gato, antena, fimDeJogo), tempoBase + (direitaDoGato * i));
     }
 
 }
@@ -71,9 +72,9 @@ async function adicionaBuraco(largura, ancestral) {
     buraco.setAttribute("class", "buraco");
     ancestral.appendChild(buraco);
 
-    let tempoColisao = (velocidade * 100) + (screen.width * ((largura + 30) / 100));
+    let tempoColisao = (velocidade * 100) + (velocidade * ((largura + 30)));
     setTimeout(() => colisao(gato, buraco, function caiuNoBuraco(posicaoGato, posicaoObstaculo) {
-        if (posicaoObstaculo.left - posicaoGato.left <= comprimentoDoGato * 0.7 && posicaoGato.right - posicaoObstaculo.right <= comprimentoDoGato * 0.5){
+        if (posicaoObstaculo.left - posicaoGato.left <= direitaDoGato * 0.7 && posicaoGato.right - posicaoObstaculo.right <= direitaDoGato * 0.5){
             fimDeJogo();
         } else {
             setTimeout(() => colisao(gato, buraco, caiuNoBuraco), velocidade);
